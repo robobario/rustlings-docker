@@ -9,7 +9,12 @@ mkdir rustlings
 cd rustlings
 curl -O https://raw.githubusercontent.com/robobario/rustlings-docker/master/rustlings.sh
 chmod +x rustlings.sh
+
+# this copies the rustlings repo to your cwd
 ./rustlings.sh verify
+
+# watch and recompile as you edit the source
+./rustlings.sh watch
 ```
 
 ## raw docker
