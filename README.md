@@ -1,6 +1,6 @@
 # rustlings docker
 
-Dockerised (rustlings)[https://github.com/rust-lang/rustlings] so you can play with rustlings without installing a rust toolchain
+Dockerised [rustlings](https://github.com/rust-lang/rustlings) so you can play with rustlings without installing a rust toolchain
 
 ## shell script for bash
 
