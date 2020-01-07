@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 if [ ! -d /opt/rustlings/ ]; then
     echo "oh no, no /opt/rustlings dir"
     exit 1
@@ -8,4 +8,4 @@ if [ ! -f /opt/rustlings/.initialised ]; then
     touch /opt/rustlings/.initialised
 fi
 cd /opt/rustlings
-exec bash -c "rustlings $@"
+exec rustlings "$@"
