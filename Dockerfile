@@ -1,13 +1,13 @@
-FROM rust:1.40.0 as builder
+FROM rust:1.44.1 as builder
 WORKDIR /usr/src
 RUN rustup target add x86_64-unknown-linux-musl
 
 RUN git clone https://github.com/rust-lang/rustlings \
     && cd rustlings \
-    && git checkout tags/2.1.0 \
+    && git checkout tags/3.0.0 \
     && cargo install --target x86_64-unknown-linux-musl --path .
 
-FROM rust:1.39.0-alpine
+FROM rust:1.44.1-alpine
 COPY --from=builder /usr/src/rustlings /rustlings
 COPY --from=builder /usr/local/cargo/bin/rustlings /bin/
 COPY --from=builder /usr/local/cargo/bin/rustc /bin/
